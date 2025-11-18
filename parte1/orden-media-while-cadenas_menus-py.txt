@@ -1,0 +1,137 @@
+#1. Escribir un programa en python que nos pida tres números en cualquier orden
+#y nos los muestre en pantalla ordenados de menor a mayor.
+
+'''n1 = float(input("numero1: "))
+n2 = float(input("numero2: "))
+n3 = float(input("numero3: "))
+
+numeros = [n1,n2,n3]
+numeros.sort()
+print("Orden de mayor a menor: ",numeros)'''
+from tkinter.font import ROMAN
+
+#float por si el usuario quiere meter numero decimales.
+#numeros = [n1,n2,n3] simplemente recojo la informacion de las variables en una palabra.
+#.sort() sirve para ordernar o hacer comparacion manual.
+
+#2. Idem al anterior pero pidiéndonos apellidos de personas
+'''ap1 = (input("numero1: "))
+ap2 = (input("numero2: "))
+ap3 = (input("numero3: "))
+
+apellidos = [ap1,ap2,ap3]
+apellidos.sort()
+print("El orden de los apellidos son: ",apellidos)'''
+
+#apellidos = [ap1,ap2,ap3] simplemente recojo la informacion de las variables en una palabra.
+#.sort() sirve para ordernar o hacer comparacion manual.
+
+#3. Escribir un programa en python que nos pida las notas de los dos trimestres y nos muestre la media aritmética resultante
+'''n1 = float(input("Nota del primer trimestre: "))
+n2 = float(input("Nota del segundo trimestre: "))
+
+notas = n1+n2
+media = notas/2
+print("Tu media es: ",media)'''
+#float por si el usuario quiere meter numero decimales.
+# lo que he hecho es recoger en una variable la operacion n1+n2 y luego divirlo entre 2 en otra variable
+    #porque para obtener la media hay que sumar los numero y luego dividirlas entre 2.
+
+#4. Escribir un programa en python que nos pida las notas obtenidas en un trimestre y nos muestre la media ponderada sabiendo que;
+    #◦ La primera nota corresponde al trabajo en clase y cuenta como un 10% del total
+    #◦ La segunda corresponde a los ejercicios prácticos: 20%
+    #◦ La tercera la nota del examen: 70%
+
+'''n1 = float(input("Nota de trabajos en clase: "))
+n2 = float(input("Nota de los ejercicios practicos: "))
+n3 = float(input("Nota del examen: "))
+
+media = n1*0.1 + n2*0.2 + n3*0.7
+print("tu media del trimestre es: ",media)'''
+
+#5. Modifica el ejercicio anterior para que cuando la media salga como aprobado pero el alumno tenga menos de un 4,5
+    # en cualquiera de los apartados la nota resultante será un 4.
+
+'''n1 = float(input("Nota de trabajos en clase: "))
+n2 = float(input("Nota de los ejercicios practicos: "))
+n3 = float(input("Nota del examen: "))
+
+media = n1*0.1 + n2*0.2 + n3*0.7
+
+nota_final = media
+
+if media >= 5 and (n1<4.5 or n2<4.5 or n3<4.5):
+        nota_final = 4.0
+
+print("nota_final es: ",nota_final)
+
+if nota_final >= 5:
+    print("estas aprobado")
+else:
+    print("estas suspenso")'''
+
+
+#6. Escribir un programa en python que pida una entrada por teclado hasta que escribamos la palabra FIN (con mayúsculas).
+    # En ese caso terminamos y mostramos por pantalla el numero de entradas válidas que hemos hecho (sin contar esta última que sólo sirve para finalizar el programa)
+'''contador = 0
+while True:
+    texto = input("pon una palabra o finaliza con Fin: ")
+    if texto == "FIN":
+        break
+    contador += 1
+print ("Las entradas han sido:", contador)'''
+
+#7. Escribir un programa en python que pida un número por teclado y nos imprima la tabla
+    #de multiplicar de dicho número del 1 al 10. Por ejemplo, si introducimos el 74 el resultado será algo así:
+'''n = int(input("ingrese numero: "))
+for a in range(1,11):
+    tabla = n * a
+    print(f"{n} x {a} = {tabla}")'''
+
+    #ingreso un numero entero con init(input("").
+    #Creo un bucle que vaya del 1 al 10.
+    #creo una variable para que el nuemro que ingrese el usuario se multiplique por el numero que va recorriendo el bucle.
+    #en el print("") la f lo que hace es que pueda meter variables con con {} mezclando asi varibles y texto.
+
+#8. Escribir un programa en python que pida una contraseña por teclado (dos veces) y si no coinciden nos las vuelva a pedir hasta que lo hagan
+
+'''while True:
+    pass1 = input("contraseña: ")
+    pass2 = input("repita contraseña: ")
+
+    if pass1 == pass2:
+        print("contraseña cambiada")
+        break
+    else:
+        print("no son iguales")'''
+
+    #while True: para indicarle que quiero un bucle que sea verdadero cuando el input("") de pass1 y pass2 sean iguales.
+    #si son inguales que me diga que la contrasela se cambio.
+    #rompo el bucle con break porque sino lo rompo aunque la condicion sea verdadera me repitiendo que ingrese las contraseñas.
+    #si la condicion es falsa es decir las contraseñas no coiciden simple vuelve a repetir el bucle del input pidiendo las contraseñas otra vez.
+
+#9. Escribir un programa en python que nos pida nuestro nombre y apellidos (dos peticiones hechas en ese orden) y nos lo escriba formateado de la siguiente forma:
+    #Morales Vázquez, José María
+'''nombres = input("ingrese sus nombres: ")
+apellidos = input("ingrese sus apellidos: ")
+print(f"{apellidos}, {nombres}")'''
+
+#10. Escribir un programa en python que nos pida elegir entre cuatro destinos turísticos (Francia, Italia, Chile o Japón)
+# y dependiendo de nuestra respuesta nos diga cual es la capital de nuestro destino (París, Roma, Santiago de Chile o Tokio)
+'''capitales = {
+    "francia": "Paris",
+    "italia": "Roma",
+    "chile": "Santiago de chile",
+    "japón": "Tokio"
+}
+
+print("paises: Francia, Italia, Chile o Japón.")
+nombre = input("ingrese su pais: ").lower()
+
+if nombre in capitales:
+    print(f"Tu destino es: {capitales[nombre]}")
+else:
+    print("Pais incorreto")'''
+
+    # creo una cadena llamada capitales{} aqui le defino que "francia": tiene un valor llamado "paris"
+    # en {capitales[nombre]} le digo que el nombre que yo haya puesto buscale su valor en capitales

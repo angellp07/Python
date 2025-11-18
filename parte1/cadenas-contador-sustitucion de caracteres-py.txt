@@ -1,0 +1,46 @@
+#1. Escribir un programa en python que pida al usuario una cadena de texto y la escriba en sin espacios en blanco (si los hubiera).
+    # Además, nos debe de decir el número de espacios que ha encontrado y suprimido
+'''texto = input("pon una frase: ")
+num_espacios = texto.count(" ")
+texto_sin_espacios = texto.replace(" ","")
+print(f"sin espacios: {texto_sin_espacios}")
+print(f"numero de espacios: {num_espacios}")'''
+
+#2. Escribir un programa que pida al usuario que escriba una cadena de texto
+    # y la imprima escrita al reves (es decir, si el usuario escribe Hola Mundo el programa debería de escribir odnuM aloH)
+'''texto = input("pon una frase: ")
+texto_al_reves = texto[::-1]
+print(f"texto al reves: {texto_al_reves}")'''
+
+#3. Escribir un programa que pida al usuario que escriba una cadena y la separe en dos distintas.
+    # En la primera de ellas estarían las letras que ocupan una posición par y en la segunda las que ocupan una posición impar.
+        # Por ejemplo, si el usuario escribe Hola Mundo la primera cadena sería Hl ud y la segunda oaMno
+'''texto = input("pon una frase: ")
+pares = texto[0::2]
+impares = texto[1::2]
+print(f"Los caracteres pares son: {pares}")
+print(f"Los caracteres impares son: {impares}")'''
+
+#4. Escribir un programa que pida al usuario una cadena de texto y la escriba con el alfabeto típico de los hackers sustituyendo las letras a por el número 4,
+    # las letras e porel número 3, las letras i por el número 1 y las letras o por el número 0.
+        # Considera que las vocales pueden estar escritas en mayúsculas o minúsculas
+            # y tiene que funcionar con ambas, pero no hace falta que tengas en cuenta que además podrían ir acentuadas
+'''texto = input("pon una frase: ")
+
+texto = texto.lower()
+texto = texto.replace("a","4")
+texto = texto.replace("e","3")
+texto = texto.replace("i","1")
+texto = texto.replace("o","0")
+
+print(texto)'''
+
+#5. Escribir un programa python que reciba una cadena de texto y la muestre sin vocales. Por ejemplo, si recibe la cadena “Hola Mundo” debería de devolver “Hl Mnd”.
+'''texto = input("pon una frase: ")
+texto = texto.lower()
+texto = texto.replace("a","")
+texto = texto.replace("e","")
+texto = texto.replace("i","")
+texto = texto.replace("o","")
+texto = texto.replace("u","")
+print(texto)'''

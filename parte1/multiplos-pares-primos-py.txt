@@ -1,0 +1,94 @@
+#1. Escribir un programa donde se muestren los 10 primeros números enteros
+'''for i in range(1, 11):
+    print(i)'''
+
+#for in: es para crear un bucle, que recorre los datos de una lista.
+    #range(nº): mostrar secuencia de numeros.
+    #aqui lo que le estamos diciendo que me muestre esa variable creada con el for.
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#2. Escribir un programa donde se muestren los 50 primeros números pares
+'''for p in range(1, 51):
+    par = 2*p
+    print(par)'''
+
+# for in: es para crear un bucle, que recorre los datos de una lista.
+# range(nº): mostrar secuencia de numeros.
+# par: es el nombre que le puse a la variable 2* Nº cualquiera.
+# lo que hago con 2*p es que los numero dentro del rango lo multiplicarlo por 2 asi me devuelve aquellos pares porque son multiplo de 2.
+#-----------------------------------------------------------------------------------------------------------------------
+
+#3. Escribir un programa donde se muestren los 5 primeros números múltiplos de uno dado por el usuario
+'''n = int(input("Numero deseado: "))
+for a in range(1, 6):
+    multiplo = n*a
+    print(multiplo)'''
+
+    #n es el numero que metera el usuario, ya que int (hace que el resultado sea un numero entero) y input (para que al usuario le aparezca una caja donde introducir el numero).
+    # for in: es para crear un bucle, que recorre los datos de una lista.
+    # range(nº): mostrar secuencia de numeros.
+    #multiplo es el nombre de la variable n * a, es decir, multiplico el numero del usuario y que me salgan los primero 5 multiplos.
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#4. Escribir un programa donde se muestren todos los números divisibles por 7 menores a 10000
+'''for a in range(7, 1000, 7):
+    print(a)'''
+
+    # for in: es para crear un bucle, que recorre los datos de una lista.
+    # range(nº): mostrar secuencia de numeros. aqui le digo muestrame los numero a partir del 7 hasta el 1000 sin incluir y que lo vaya haciendo en saltos de 7 en 7.
+
+#-----------------------------------------------------------------------------------------------------------------------
+#5. Escribir un programa que pida un número al usuario y diga si es par o impar
+'''n = int(input("Numero: "))
+resto = n%2
+if resto == 0:
+    print(n, "es par")
+else:
+    print(n, "es impar")'''
+
+    #Numero entero introducido por el usuario.
+    #Hecho que el numero del usuario se divida en entre 2 con resto y me lo encamsulo en la palabra resto.
+    # abro un if para señelar una condicion diciendo que si la division de n%2 es igual a 0 es par, sino es impar
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#6. Escribir un programa que pida un número al usuario y diga si es divisible por 3 o no.
+'''n = int(input("numero del usuario: "))
+resto = n%3
+if resto == 0:
+    print(n, "si es divisible entre 3")
+else:
+    print(n, "no es divisible entre 3")'''
+
+    # Numero entero introducido por el usuario.
+    #Hecho que el numero del usuario se divida en entre 3 con resto y me lo encamsulo en la palabra resto.
+    # abro un if para señelar una condicion diciendo que si la division de n%2 es igual a 0 es par, sino es impar
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#7. Escribir un programa que pida un número al usuario que simule ser el precio de un artículo y escriba el resultado de aplicarle el IVA del 21%
+'''n = int(input("precio de articulo: "))
+p = (21/100)+1
+iva = n*p
+print("tu precio con iva es:", iva)'''
+
+    # Numero entero introducido por el usuario.
+    # hago cuanto seria el porcentaje de 21, el resultado de esto es 0,21, y le añado 1 porque el precio ya cuenta como el  100% por tanto seria 1.
+    #aqui lo que hago es multiplicar el numero de usuario * el porcentaje
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#15. Escribir un programa que pida un número al usuario y calcule si es primo o no lo es
+'''n = int(input("numero del usuario: "))
+
+if n <= 1:
+    print("no es un numero primo")
+else:
+    for a in range(2, n):
+        if n % a == 0:
+            print("no es un numero primo")
+            break
+    else:
+        print("si es un  numero primo")'''

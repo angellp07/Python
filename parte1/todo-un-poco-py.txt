@@ -1,0 +1,101 @@
+#1. Escribir un programa en python que pida al usuario un número y escriba todos sus divisores
+'''n = int(input("dime un numero: "))
+for a in range(1,n+1):
+    if n % a == 0:
+        print(a)'''
+
+#2. Idem, pero que ponga los divisores uno detrás de otro separados por comas en lugar de uno debajo de otro
+'''n = int(input("dime un numero: "))
+
+divisores = []
+
+for a in range(1,n+1):
+    if n % a == 0:
+        divisores.append(a)
+print(f"Los divisores del numero {n} son: {divisores}")'''
+
+    #creo divisores que es un contenedor vacio para guardar los resultados de la condicion
+    #creo un bucle que vaya del 1 hasta el numero que el usuario nos dio + 1 para que cuente ese numero del usuario porque sino cuenta uno menos
+    #if n % a == 0: es para que cuando se cumpla la condicion de que el numero de usuario se divida entre entre los numero del bucle
+        #y aquellos resultados que den 0 metelos con .append() en el contenedor vacio divisores y lo hara en el formato 1,2,3,4.
+
+#5. Escribir un programa que pida números enteros por teclado. La ejecución terminará cuando el usuario introduzca la palabra EXIT.
+    #En ese momento debería de mostrar un mensaje diciendo el número de números introducidos, la suma de todos y su media aritmética.
+'''suma = 0
+contador = 0
+
+while True:
+    texto = input("pon numeros o para con la palabra EXIT: ")
+    if texto.upper() == "EXIT":
+       break
+
+    n = int(texto)
+    suma += n
+    contador += 1
+
+if contador == 0:
+    print("No se han metido numeros")
+else:
+    media = suma / contador
+    print(f"Has metido estos numeros: {contador}")
+    print(f"la suma es: {suma}")
+    print(f"la media es: {media}")'''
+
+#6. Modificar el programa anterior para que, además, nos diga cual han sido el número mayor y el menor que has introducido
+'''suma = 0
+contador = 0
+numeros = []
+
+while True:
+    texto = input("pon numeros o para con la palabra EXIT: ")
+    if texto.upper() == "EXIT":
+       break
+
+    n = int(texto)
+    numeros.append(n)
+    numeros.sort()
+    suma += n
+    contador += 1
+
+if contador == 0:
+    print("No se han metido numeros")
+else:
+    media = suma / contador
+    print(f"Has metido estos numeros: {contador}")
+    print(f"la suma es: {suma}")
+    print(f"la media es: {media}")
+    print(f"aqui tienes tus numeros ordenados: {numeros}")'''
+
+#7. Escribir un programa en Python que te escriba todos los números primos que hay entre el 1 y el 100
+'''primos_cont = []
+
+for a in range(2, 101):
+    primo = True
+
+    for divisor in range(2, a):
+        if a % divisor == 0:
+            primo = False
+            break
+    if primo:
+        primos_cont.append(a)
+
+print(f"Los numeros primos son: {primos_cont}")'''
+
+#8. Modifica el programa anterior para que sea el usuario quién introduzca dos números y se nos muestre los primos que hay entre ambos
+'''n1 = int(input("dime un numero: "))
+n2 = int(input("dime un numero: "))
+
+primos_cont = []
+
+for a in range(n1, n2 + 1):
+            primo = True
+
+for divisor in range(2, a):
+    if a % divisor == 0:
+        primo = false
+        break
+
+if primo:
+    primos_cont.append(divisor)
+
+print(f"Los numeros primos son: {primos_cont}")'''
